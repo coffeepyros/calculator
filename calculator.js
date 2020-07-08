@@ -36,19 +36,19 @@ function operation(op) {
   if (opFlag === false) {
     switch (op) {
       case "add":
-        input.value += " + ";
+        input.value += "+";
         break;
       case "sub":
-        input.value += " - ";
+        input.value += "-";
         break;
       case "mult":
-        input.value += " × ";
+        input.value += "×";
         break;
       case "div":
-        input.value += " ÷ ";
+        input.value += "÷";
         break;
       case "mod":
-        input.value += " % ";
+        input.value += "%";
         break;
       default:
         console.log("Not a valid operation!");

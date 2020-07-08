@@ -1,56 +1,75 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap"); */
 * {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: "Anonymous Pro", Arial, Helvetica, sans-serif;
+  font-weight: 700;
   font-size: 1.5rem;
 }
 
 body {
-  background-color: #000;
+  background-color: #333;
 }
 
 main {
+  background-color: #000;
   width: 500px;
-  height: 100vmin;
   margin: auto;
+  height: 96vmin;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: relative;
+  top: 2vmin;
 }
 
 #calculator {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: auto auto repeat(5, 1fr) auto;
   gap: 0.5rem;
   justify-items: center;
   align-items: center;
 }
 
+#title {
+  width: 100%;
+  grid-column: 1 / span 4;
+}
 #input_display {
   width: 100%;
   grid-column: 1 / span 4;
   background-color: #363636;
   color: #fff;
   font-size: 2rem;
-  padding: 0.5rem 0.33rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  text-align: right;
 }
 #button0 {
   grid-column: 1 / span 2;
   width: 100%;
 }
 button {
-  width: 3em;
-  height: 3em;
+  width: 2.67em;
+  height: 2.67em;
   border-radius: 1.5em;
+  margin-bottom: 0.33rem;
 }
 button.numbers {
   background-color: hsl(0, 0%, 20%);
-  color: #fff;
+  color: hsl(0, 0%, 100%);
 }
 button.numbers:hover {
   background-color: hsl(0, 0%, 25%);
+}
+button.numbers:active {
+  background-color: hsl(0, 0%, 10%);
+  color: hsl(0, 0%, 90%);
 }
 button.clearing {
   background-color: hsl(0, 0%, 65%);
@@ -59,16 +78,27 @@ button.clearing {
 button.clearing:hover {
   background-color: hsl(0, 0%, 75%);
 }
+button.clearing:active {
+  background-color: hsl(0, 0%, 50%);
+}
 button.operation {
   background-color: hsl(36, 100%, 50%);
-  color: #fff;
+  color: hsl(0, 0%, 100%);
 }
 button.operation:hover {
   background-color: hsl(36, 100%, 60%);
-  color: #fff;
+}
+button.operation:active {
+  background-color: hsl(36, 100%, 40%);
+  color: hsl(0, 0%, 90%);
+}
+button:active {
+  position: relative;
+  top: 3px;
+  left: 3px;
 }
 p {
   grid-column: 1 / span 4;
-  font-size: 1rem;
+  font-size: 0.75rem;
   color: #444;
 }
