@@ -19,11 +19,11 @@ main {
   background-color: #000;
   width: 500px;
   margin: auto;
-  height: 96vmin;
+  height: 96vh;
   padding: 1rem;
   border-radius: 1rem;
   position: relative;
-  top: 2vmin;
+  top: 2vh;
 }
 
 #calculator {
